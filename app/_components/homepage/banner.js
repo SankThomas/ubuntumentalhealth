@@ -20,8 +20,14 @@ export default function Banner() {
         </article>
       </div>
 
-      <div className="hidden lg:block absolute -bottom-20 lg:bottom-0 right-0 w-full">
-        <Image src="/banner.png" width={2560} height={1080} alt="Banner" />
+      <div className="hidden lg:block absolute -bottom-20 lg:bottom-0 right-0 left-0 w-full">
+        <Image
+          src="/banner.png"
+          width={2560}
+          height={1080}
+          alt="Banner"
+          className="w-full"
+        />
       </div>
     </section>
   );
