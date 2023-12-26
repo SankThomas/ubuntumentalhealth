@@ -15,10 +15,21 @@ import {
 
 import { MenuIcon } from "lucide-react";
 import SocialIcons from "./socialIcons";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
-    <header className="lg:fixed lg:w-full">
+    <header className="lg:fixed z-[99] lg:w-full lg:bg-white/10">
       <div className="max-width lg:flex lg:items-center lg:justify-between gap-4 py-4">
         <Sheet>
           <SheetTrigger>
@@ -36,7 +47,7 @@ export default function Header() {
             </button>
           </SheetTrigger>
 
-          <SheetContent side="left" className="w-full">
+          <SheetContent side="left" className="w-full z-[100]">
             <SheetHeader className="space-y-12">
               <SheetTitle>
                 <Image
@@ -53,6 +64,8 @@ export default function Header() {
 
               <SheetDescription>
                 <SocialIcons />
+
+                {/* Remember to remove this paragraph */}
                 <p className="mt-12">
                   Hapa kutakuwa na some other options / items. For now inashow
                   tu other links.
