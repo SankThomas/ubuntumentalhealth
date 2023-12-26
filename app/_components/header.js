@@ -34,7 +34,7 @@ export default function Header() {
         <Sheet>
           <SheetTrigger>
             <button className="lg:hidden">
-              <MenuIcon className="text-2xl text-white cursor-pointer" />
+              <MenuIcon className="text-2xl text-slate-800 cursor-pointer" />
             </button>
 
             <button className="hidden lg:block hover:scale-110 transition">
