@@ -1,18 +1,15 @@
+import Link from "next/link";
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar({ items }) {
   return (
     <nav>
       <ul className="grid gap-4">
-        <li>
-          <button>Home</button>
-        </li>
-        <li>
-          <button>About</button>
-        </li>
-        <li>
-          <button>Contacts</button>
-        </li>
+        {items.map((link, index) => (
+          <li key={index}>
+            <Link href={link.href}>{link.title}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
