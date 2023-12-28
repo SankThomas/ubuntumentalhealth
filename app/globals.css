@@ -80,7 +80,7 @@ p {
 }
 
 .max-width {
-  @apply container mx-auto px-2;
+  @apply container mx-auto px-4;
 }
 
 .showcase {
