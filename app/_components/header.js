@@ -17,6 +17,25 @@ import { MenuIcon } from "lucide-react";
 import SocialIcons from "./socialIcons";
 import { useEffect, useState } from "react";
 
+const links = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About us",
+    href: "/about-us",
+  },
+  {
+    title: "Meet the Team",
+    href: "/team",
+  },
+  {
+    title: "Gallery",
+    href: "/gallery",
+  },
+];
+
 export default function Header() {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -30,7 +49,7 @@ export default function Header() {
 
   return (
     <header className="lg:fixed z-[99] lg:w-full lg:bg-white/10">
-      <div className="max-width lg:flex lg:items-center lg:justify-between gap-4 py-4">
+      <div className="max-width flex items-center justify-between gap-4 py-4">
         <Sheet>
           <SheetTrigger>
             <button className="lg:hidden">
@@ -47,7 +66,7 @@ export default function Header() {
             </button>
           </SheetTrigger>
 
-          <SheetContent side="left" className="w-full z-[100]">
+          <SheetContent side="left" className="w-2/3 sm:w-[400px] z-[100]">
             <SheetHeader className="space-y-12">
               <SheetTitle>
                 <Image
@@ -59,17 +78,11 @@ export default function Header() {
                 />
               </SheetTitle>
               <SheetDescription>
-                <Navbar />
+                <Navbar items={links} />
               </SheetDescription>
 
               <SheetDescription>
                 <SocialIcons />
-
-                {/* Remember to remove this paragraph */}
-                <p className="mt-12">
-                  Hapa kutakuwa na some other options / items. For now inashow
-                  tu other links.
-                </p>
               </SheetDescription>
 
               <SheetDescription>
@@ -79,24 +92,29 @@ export default function Header() {
           </SheetContent>
         </Sheet>
 
+        <div className="lg:hidden">
+          <Image
+            src="/logo.png"
+            width={60}
+            height={60}
+            alt="Ubuntu Mental Health Logo"
+            className="block mx-auto lg:inline"
+          />
+        </div>
+
         <div className="hidden lg:flex items-center justify-between gap-4">
           <nav>
             <ul className="flex items-center gap-4">
-              <li>
-                <button className="text-white border-b-2 border-white pb-2">
-                  Home
-                </button>
-              </li>
-              <li>
-                <button className="text-white border-b-2 border-transparent pb-2">
-                  About
-                </button>
-              </li>
-              <li>
-                <button className="text-white border-b-2 border-transparent pb-2">
-                  Contacts
-                </button>
-              </li>
+              {links.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-white border-b-2 border-white pb-2"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
