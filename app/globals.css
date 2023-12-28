@@ -88,8 +88,23 @@ p {
   @apply h-screen;
 }
 
-/* h1 {
-  background: -webkit-linear-gradient(120deg, white, #241ade);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
+h1 {
+  @apply text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-slate-900 font-bold;
+}
+
+p {
+  line-height: 1.8;
+}
+
+img {
+  max-width: 100%;
+}
