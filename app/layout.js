@@ -6,7 +6,7 @@ import Footer from "./_components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metaDataBase: "https://ubuntumentalhealth.netlify.app",
+  metaDataBase: "https://ubuntumentalhealth.vercel.app",
   title: {
     default: "Ubuntu Mental Health",
     template: "%s - Ubuntu Mental Health",
@@ -15,6 +15,9 @@ export const metadata = {
     "Ubuntu Mental Health is a non-profit organization that supports young mothers in Kenya through mental health and basic needs support and environmental action. 🌱",
   twitter: {
     card: "summary_large_image",
+  },
+  openGraph: {
+    images: "/opengraph-image.png",
   },
 };
 
