@@ -7,9 +7,7 @@ export default function Banner() {
     <section className="showcase">
       <div className="relative z-50 bg-black/50 flex items-center justify-center text-center h-screen">
         <article className="space-y-8">
-          <h1 className="text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold">
-            Ubuntu Mental Health
-          </h1>
+          <h1 className="text-white">Ubuntu Mental Health</h1>
           <p className="lg:w-1/2 mx-auto text-white/75 lg:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
             sit ducimus quaerat numquam quibusdam ipsam qui minus quod
