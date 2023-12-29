@@ -108,3 +108,7 @@ p {
 img {
   max-width: 100%;
 }
+
+.active {
+  border-bottom: 2px solid white;
+}
