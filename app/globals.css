@@ -89,7 +89,7 @@ p {
 }
 
 h1 {
-  @apply text-4xl lg:text-6xl 2xl:text-8xl text-white font-bold;
+  @apply text-4xl lg:text-6xl text-white font-bold;
 }
 
 h1,
