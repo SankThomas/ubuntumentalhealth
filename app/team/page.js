@@ -10,13 +10,12 @@ import {
   SheetContent,
   SheetDescription,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
 export default function Team() {
   const [isMounted, setIsMounted] = useState(false);
-  const [value, setValue] = useState(2);
+  const [value, setValue] = useState(0);
 
   const { name, image, bio, role, socials } = team[value];
 
