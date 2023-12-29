@@ -5,7 +5,7 @@ import React from "react";
 export default function Banner() {
   return (
     <section className="showcase">
-      <div className="relative z-50 bg-black/50 flex items-center justify-center text-center h-screen">
+      <div className="relative z-50 bg-black/25 flex items-center justify-center text-center h-screen">
         <article className="space-y-8">
           <h1 className="text-white">Ubuntu Mental Health</h1>
           <p className="lg:w-1/2 mx-auto text-white/75 lg:text-xl">
