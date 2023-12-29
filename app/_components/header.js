@@ -16,6 +16,7 @@ import {
 import { MenuIcon } from "lucide-react";
 import SocialIcons from "./socialIcons";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const links = [
   {
@@ -38,6 +39,7 @@ const links = [
 
 export default function Header() {
   const [isMounted, setIsMounted] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsMounted(true);
@@ -48,7 +50,7 @@ export default function Header() {
   }
 
   return (
-    <header className="lg:fixed z-[99] lg:w-full lg:bg-white/10">
+    <header className="lg:fixed z-[99] lg:w-full lg:bg-slate-900/50">
       <div className="max-width flex items-center justify-between gap-4 py-4">
         <Sheet>
           <SheetTrigger>
@@ -109,7 +111,9 @@ export default function Header() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-white border-b-2 border-white pb-2"
+                    className={`text-white border-b-2 border-transparent pb-2 ${
+                      pathname === link.href && "active"
+                    }`}
                   >
                     {link.title}
                   </Link>
