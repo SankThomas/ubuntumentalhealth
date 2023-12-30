@@ -6,7 +6,7 @@ import Footer from "./_components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metaDataBase: "https://ubuntumentalhealth.vercel.app",
+  metadataBase: new URL("https://ubuntumentalhealth.vercel.app"),
   title: {
     default: "Ubuntu Mental Health",
     template: "%s - Ubuntu Mental Health",
