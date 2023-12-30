@@ -102,6 +102,7 @@ h6 {
 }
 
 p {
+  @apply lg:text-lg;
   line-height: 1.8;
 }
 
