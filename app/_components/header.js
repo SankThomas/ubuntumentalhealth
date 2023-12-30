@@ -28,6 +28,14 @@ const links = [
     href: "/about-us",
   },
   {
+    title: "Our programs",
+    href: "/our-programs",
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+  },
+  {
     title: "Meet the Team",
     href: "/team",
   },
@@ -50,7 +58,7 @@ export default function Header() {
   }
 
   return (
-    <header className="lg:fixed z-[99] lg:w-full lg:bg-slate-900/50">
+    <header className="lg:absolute z-[99] lg:w-full lg:bg-slate-900">
       <div className="max-width flex items-center justify-between gap-4 py-4">
         <Sheet>
           <SheetTrigger>
