@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'team',
-  title: 'Team',
+  title: 'Meet the Team',
   type: 'document',
   fields: [
     defineField({
@@ -11,13 +11,9 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'name',
-        maxLength: 96,
-      },
+      name: 'position',
+      tilte: 'Position',
+      type: 'string',
     }),
     defineField({
       name: 'image',
@@ -26,6 +22,18 @@ export default defineType({
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: 'socials',
+      title: 'Socials',
+      type: 'array',
+      of: [
+        {
+          title: 'Social Media',
+          name: 'href',
+          type: 'url',
+        },
+      ],
     }),
     defineField({
       name: 'bio',
