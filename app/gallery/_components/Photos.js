@@ -29,11 +29,11 @@ export default function Photos({ photos, title }) {
                   {index + 1} of {photos.length}
                 </p>
 
-                {photo.description && (
+                {/* {photo.description && (
                   <p className="text-sm text-slate-900/75">
                     {photo.description}
                   </p>
-                )}
+                )} */}
               </CardContent>
             </Card>
           </CarouselItem>
