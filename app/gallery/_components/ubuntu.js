@@ -46,7 +46,7 @@ export default function Ubuntu() {
   return (
     <>
       <div>
-        <h2 className={`text-3xl mb-4`}>Ubuntu Mental Health</h2>
+        <h2 className={`text-3xl mb-4`}>Ubuntu Mental Health Circles</h2>
         <Photos photos={ubuntuphotos} title="Ubuntu Mental Health" />
       </div>
     </>
