@@ -1,4 +1,4 @@
-import Photos from "./Photos";
+import Photos from "./photos";
 
 const otherphotos = [
   {

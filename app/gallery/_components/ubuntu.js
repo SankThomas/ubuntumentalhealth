@@ -1,5 +1,5 @@
 import { Oswald } from "next/font/google";
-import Photos from "./Photos";
+import Photos from "./photos";
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["600"] });
 
