@@ -54,7 +54,7 @@ export default function Mobile() {
               />
 
               <article className="space-y-4">
-                <h2 className="flex flex-wrap gap-2 items-center justify-between text-3xl">
+                <h2 className="flex flex-col flex-wrap gap-2 items-center justify-between text-3xl">
                   {name}{" "}
                   <small className="text-slate-600 inline-block mb-2 text-sm font-normal">
                     {role}
