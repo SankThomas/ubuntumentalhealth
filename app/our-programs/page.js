@@ -43,7 +43,7 @@ export default async function Blog() {
               key={program._id}
               href={`/our-programs/${program.slug.current}`}
             >
-              <Card className="md:flex items-center justify-center hover:bg-slate-100 transition">
+              <Card className="md:grid md:grid-cols-2 md:items-center hover:bg-slate-100">
                 <CardHeader className="md:flex-1">
                   {program.mainImage ? (
                     <Image
@@ -51,33 +51,31 @@ export default async function Blog() {
                       width={800}
                       height={900}
                       alt="Blog"
-                      className="block mx-auto rounded-lg md:h-[300px] w-full object-cover"
+                      className="block mx-auto rounded-lg md:h-[400px] w-full object-cover"
                     />
                   ) : null}
                 </CardHeader>
 
                 <CardDescription className="px-6 pb-6 md:flex-1">
-                  <article>
-                    <div className="space-y-4">
-                      <h2 className="text-2xl mb-2">{program.title}</h2>
+                  <div className="space-y-4">
+                    <h2 className="text-2xl mb-2">{program.title}</h2>
 
-                      <p className="text-slate-600 text-sm md:hidden">{`${program.body[0].children[0].text.substring(
-                        0,
-                        100
-                      )}...`}</p>
+                    <p className="text-slate-600 text-sm md:hidden">{`${program.body[0].children[0].text.substring(
+                      0,
+                      100
+                    )}...`}</p>
 
-                      <p className="text-slate-600 text-sm hidden md:block">{`${program.body[0].children[0].text.substring(
-                        0,
-                        300
-                      )}...`}</p>
+                    <p className="text-slate-600 text-sm hidden md:block">{`${program.body[0].children[0].text.substring(
+                      0,
+                      300
+                    )}...`}</p>
 
-                      <Button asChild variant="ghost">
-                        <Link href={`/our-programs/${program.slug.current}`}>
-                          Read More &rarr;
-                        </Link>
-                      </Button>
-                    </div>
-                  </article>
+                    <Button asChild variant="ghost">
+                      <Link href={`/our-programs/${program.slug.current}`}>
+                        Read More &rarr;
+                      </Link>
+                    </Button>
+                  </div>
                 </CardDescription>
               </Card>
             </Link>
