@@ -81,8 +81,7 @@ export default async function Page({ params }) {
           },
           alt,
         },
-      }`,
-      { slug }
+      }`
     );
   }
 
@@ -94,8 +93,8 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <section className="max-width py-20 lg:py-44">
-        <h1 className="text-center">{program.title}</h1>
+      <section className="max-w-3xl mx-auto py-20 lg:pt-44">
+        <h1 className="text-center mb-16">{program.title}</h1>
 
         <div className="portable-text">
           {program.mainImage ? (
@@ -104,53 +103,58 @@ export default async function Page({ params }) {
               width={800}
               height={900}
               alt="Blog"
-              className="block mx-auto rounded-lg md:h-[300px] w-full object-cover mb-8"
+              className="block mx-auto rounded-lg md:h-[600px] w-full object-contain mb-8"
             />
           ) : null}
 
           <PortableText value={program.body} />
-
-          <div>
-            <h2 className="mt-16 text-3xl lg:text-4xl mb-4 text-center">
-              Stories
-            </h2>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              {stories.map((story) => (
-                <Card
-                  key={story._id}
-                  className="p-4 lg:p-6 md:flex md:even:flex-row-reverse"
-                >
-                  <CardTitle className="md:flex-1">
-                    {story.mainImage ? (
-                      <Image
-                        src={story.mainImage.asset.url}
-                        width={150}
-                        height={150}
-                        alt={story.title}
-                        className="block mx-auto rounded-lg object-cover"
-                      />
-                    ) : null}
-                  </CardTitle>
-
-                  <CardDescription className="md:flex-1">
-                    <h2 className="text-2xl mb-2">{story.title}</h2>
-                    <p className="text-slate-600 text-sm">
-                      {story.body[0].children[0].text}
-                    </p>
-                  </CardDescription>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          <Button asChild variant="custom">
-            <Link href="/our-programs" className="mt-8">
-              &larr; Back
-            </Link>
-          </Button>
         </div>
       </section>
+
+      <div className="max-width pb-32">
+        <h2 className="text-3xl lg:text-4xl mb-4 text-center">Stories</h2>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          {stories.map((story) => (
+            <Card
+              key={story._id}
+              className="p-4 lg:p-6 md:flex md:even:flex-row-reverse"
+            >
+              <CardTitle className="md:flex-1">
+                {story.mainImage ? (
+                  <Image
+                    src={story.mainImage.asset.url}
+                    width={150}
+                    height={150}
+                    alt={story.title}
+                    className="block mx-auto rounded-lg object-cover"
+                  />
+                ) : null}
+              </CardTitle>
+
+              <CardDescription className="md:flex-1">
+                <h2 className="text-2xl mb-2">{story.title}</h2>
+                <p className="text-slate-600 text-sm leading-7">
+                  {story.body[0].children[0].text}
+                </p>
+              </CardDescription>
+            </Card>
+          ))}
+        </div>
+
+        <ul className="mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-8">
+          <li>
+            <Button asChild variant="ghost">
+              <Link href="/our-programs">&larr; Back</Link>
+            </Button>
+          </li>
+          <li>
+            <Button asChild variant="custom">
+              <Link href="/our-programs/stories">All Stories &rarr;</Link>
+            </Button>
+          </li>
+        </ul>
+      </div>
     </>
   );
 }
