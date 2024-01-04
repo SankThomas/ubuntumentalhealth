@@ -17,6 +17,7 @@ import { MenuIcon } from "lucide-react";
 import SocialIcons from "./socialIcons";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Logo from "./logo";
 
 const links = [
   {
@@ -60,56 +61,52 @@ export default function Header() {
   return (
     <header className="lg:absolute z-[99] lg:w-full lg:bg-slate-900">
       <div className="max-width flex items-center justify-between gap-4 py-4">
-        <Sheet>
-          <SheetTrigger>
-            <button className="lg:hidden">
-              <MenuIcon className="text-2xl text-slate-800 cursor-pointer" />
-            </button>
+        <div className="lg:hidden">
+          <Sheet>
+            <SheetTrigger>
+              <button className="lg:hidden">
+                <MenuIcon className="text-2xl text-slate-800 cursor-pointer" />
+              </button>
 
-            <button className="hidden lg:block hover:scale-110 transition">
-              <Image
-                src="/logo.png"
-                width={60}
-                height={60}
-                alt="Ubuntu Mental Health Logo"
-              />
-            </button>
-          </SheetTrigger>
-
-          <SheetContent side="left" className="w-2/3 sm:w-[400px] z-[100]">
-            <SheetHeader className="space-y-12">
-              <SheetTitle>
+              <button className="hidden lg:block hover:scale-110 transition">
                 <Image
                   src="/logo.png"
                   width={60}
                   height={60}
                   alt="Ubuntu Mental Health Logo"
-                  className="block mx-auto lg:inline"
                 />
-              </SheetTitle>
-              <SheetDescription>
-                <Navbar items={links} />
-              </SheetDescription>
+              </button>
+            </SheetTrigger>
 
-              <SheetDescription>
-                <SocialIcons />
-              </SheetDescription>
+            <SheetContent side="left" className="w-2/3 sm:w-[400px] z-[100]">
+              <SheetHeader className="space-y-12">
+                <SheetTitle>
+                  <Image
+                    src="/logo.png"
+                    width={60}
+                    height={60}
+                    alt="Ubuntu Mental Health Logo"
+                    className="block mx-auto lg:inline"
+                  />
+                </SheetTitle>
+                <SheetDescription>
+                  <Navbar items={links} />
+                </SheetDescription>
 
-              <SheetDescription>
-                <div>&copy; Ubuntu Mental Health 2024</div>
-              </SheetDescription>
-            </SheetHeader>
-          </SheetContent>
-        </Sheet>
+                <SheetDescription>
+                  <SocialIcons />
+                </SheetDescription>
 
-        <div className="lg:hidden">
-          <Image
-            src="/logo.png"
-            width={60}
-            height={60}
-            alt="Ubuntu Mental Health Logo"
-            className="block mx-auto lg:inline"
-          />
+                <SheetDescription>
+                  <div>&copy; Ubuntu Mental Health 2024</div>
+                </SheetDescription>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        <div>
+          <Logo />
         </div>
 
         <div className="hidden lg:flex items-center justify-between gap-4">
