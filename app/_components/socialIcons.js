@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -10,32 +11,32 @@ export default function SocialIcons() {
     <>
       <ul className="flex items-center justify-center lg:justify-start gap-4 flex-wrap">
         <li>
-          <button>
+          <Button asChild variant="ghost">
             <a href="https://facebook.com">
               <FacebookIcon />
             </a>
-          </button>
+          </Button>
         </li>
         <li>
-          <button>
+          <Button asChild variant="ghost">
             <a href="https://instagram.com">
               <InstagramIcon />
             </a>
-          </button>
+          </Button>
         </li>
         <li>
-          <button>
+          <Button asChild variant="ghost">
             <a href="https://linkedin.com">
               <LinkedinIcon />
             </a>
-          </button>
+          </Button>
         </li>
         <li>
-          <button>
+          <Button asChild variant="ghost">
             <a href="https://youtube.com">
               <YoutubeIcon />
             </a>
-          </button>
+          </Button>
         </li>
       </ul>
     </>
