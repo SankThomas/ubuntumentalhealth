@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <>
       <section className="bg-gradient-to-r from-indigo-700 to-pink-700">
-        <div className="max-width py-20 lg:py-44 flex flex-col items-center justify-center gap-4 text-center space-y-8">
+        <div className="max-w-4xl mx-auto py-20 lg:py-44 flex flex-col items-center justify-center gap-4 text-center space-y-8">
           <article className="space-y-4">
             <h1 className="text-white">About us</h1>
 
